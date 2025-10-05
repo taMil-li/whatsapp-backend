@@ -11,7 +11,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000", 
+        origin: "https://whatsapp-frontend-oxkjhbi99-tamil-lis-projects.vercel.app/", 
         methods: ["GET", "POST"]
     }
 });
@@ -123,4 +123,4 @@ io.on('connection', (socket) => {
 });
 
 
-server.listen(process.env.PORT || 3001, () => console.log(`Server running on ${process.env.PORT}`));
+server.listen(process.env.PORT || 8080, () => console.log(`Server running on ${process.env.PORT}`));
